@@ -71,10 +71,52 @@ body {
     max-width: 1110px;
     border: 1px solid #f15d51;
     display: grid;
-    grid-template-rows: 40px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-auto-rows: auto;
     gap: 61px;
+    
 }
 
+main {
+
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: 1fr 1fr  129px;
+    gap: 71px 30px;
+
+    .picture {
+        background-image: url(../assets/images/image-web-3-desktop.jpg);
+    }
+
+    .first {
+        grid-column: 1/3;
+        grid-row: 1/3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* align-items: end; */
+        row-gap: 30px;
+        
+        img {
+            grid-column: 1/3;
+        }
+
+        .future {
+            grid-column: 1/2;
+            grid-row: 2;
+            align-content: end;
+        }
+    }
+    .new {
+        grid-column: 3;
+        grid-row: 1/3;
+    }
+    .cards {
+        grid-column: 1/4;
+        grid-row: 3/4;
+        display: grid;
+        grid-auto-flow: column;
+    }
+}
 
 a {
     text-decoration: none;
@@ -86,6 +128,7 @@ nav {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
+    /* margin-block-end: 61px; */
 
     &>a {
         display: inline-block;
@@ -106,4 +149,3 @@ nav {
         
     }
 }
-
