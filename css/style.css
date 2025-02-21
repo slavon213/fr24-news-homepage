@@ -76,16 +76,21 @@ body {
 }
 
 
+a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
 nav {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
 
-    a {
+    &>a {
         display: inline-block;
         width: 64px;
         height: 40px;
-        text-decoration: none;
         text-indent: -9999px;
         background: url(../assets/images/logo.svg);
         background-size: contain;
