@@ -43,16 +43,19 @@ Very dark blue: hsl(240, 100%, 5%)
 }
 
 :root {
-    
     /* Colors */
-    --soft-yellow: #E9AA52;
-    --light-vermillion: #F15D51;
+    --soft-yellow: #e9aa52;
+    --light-vermillion: #f15d51;
     --almost-white: #fffdfa;
-    --silver: #C5C6CE;
-    --gunmetal: #5E607A;
+    --silver: #c5c6ce;
+    --gunmetal: #5e607a;
     --dark-space-blue: #00001a;
 }
 
+html,
+body {
+    height: 100%;
+}
 
 body {
     font-family: "Inter", serif;
@@ -60,4 +63,42 @@ body {
     font-size: 15px;
     line-height: 26px;
     color: var(--gunmetal);
+    display: grid;
+    place-content: center;
 }
+
+.container {
+    max-width: 1110px;
+    border: 1px solid #f15d51;
+    display: grid;
+    grid-template-rows: 40px 1fr;
+    gap: 61px;
+}
+
+
+nav {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+
+    a {
+        display: inline-block;
+        width: 64px;
+        height: 40px;
+        text-decoration: none;
+        text-indent: -9999px;
+        background: url(../assets/images/logo.svg);
+        background-size: contain;
+
+    }
+    
+    ul {
+        list-style: none;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: end;
+        column-gap:40px;
+        
+    }
+}
+
