@@ -1,0 +1,63 @@
+/* 
+## Colors
+
+### Primary
+
+- Soft orange: hsl(35, 77%, 62%)
+- Soft red: hsl(5, 85%, 63%)
+
+### Neutral
+
+Off-white: hsl(36, 100%, 99%)
+Grayish blue: hsl(233, 8%, 79%)
+Dark grayish blue: hsl(236, 13%, 42%)
+Very dark blue: hsl(240, 100%, 5%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 15px
+
+### Font
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700, 800 */
+
+@font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/static/Inter-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/static/Inter-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/static/Inter-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+}
+
+:root {
+    
+    /* Colors */
+    --soft-yellow: #E9AA52;
+    --light-vermillion: #F15D51;
+    --almost-white: #fffdfa;
+    --silver: #C5C6CE;
+    --gunmetal: #5E607A;
+    --dark-space-blue: #00001a;
+}
+
+
+body {
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: var(--gunmetal);
+}
