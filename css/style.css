@@ -123,9 +123,40 @@ main {
     .new {
         grid-column: 3/4;
         grid-row: 1/3;
-        color: var(--almost-white);
         background-color: var(--dark-space-blue);
+        padding: 31px 24px;
+        
+        p span {
+            color: var(--soft-yellow);
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 40px;
+            margin-block-end: 34px;
+        }
+        
+        h3 {
+            color: var(--almost-white);
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 24px;
+            margin-block-end: 8px;
+        }
+        p {
+            color: var(--silver);
+            font-feature-settings: 'liga' off, 'clig' off;
+            margin-block-end: 29px;
+        }
 
+        p:last-child {
+            margin-block-end: 0;
+        }
+
+        hr {
+            margin-block-end: 31px;
+            border: none;
+            border-bottom: 1px solid var(--gunmetal);
+            /* border-color: var(--gunmetal); */
+        }
     }
 
     .articles {
