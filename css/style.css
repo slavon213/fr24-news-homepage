@@ -259,7 +259,9 @@ nav {
         grid-auto-rows: auto;
         gap: 32px;
     }
-
+    nav ul {
+        display: none;
+    }
     main {
         grid-template-columns: 343px;
         grid-template-rows: auto;
@@ -280,8 +282,19 @@ nav {
             .dive {
                 margin-block-end: 40px;
             }
+
+            .new {
+
+                p span {
+                    font-size: 32px;
+                    line-height: 32px;
+                }
+            }
             
         }
+
+
+
         .articles {
             grid-column: 1;
             grid-auto-flow: row;
