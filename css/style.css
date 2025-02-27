@@ -161,8 +161,14 @@ main {
             }
         }
     }
+
+    article {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: 3fr;
+        column-gap: 24px;
+    }
     .articles {
-        /* margin-block-start: 72px; */
         /* grid-row: 3/4; */
         grid-column: 1/4;
         display: grid;
