@@ -241,3 +241,45 @@ nav {
         }
     }
 }
+
+@media (max-width: 1060px) {
+    body {
+        padding-block-start: 28px;
+        padding-block-end: 80px;
+    }
+    .container {
+        max-width: 375px;
+        grid-template-rows: auto;
+        grid-auto-rows: auto;
+        gap: 32px;
+    }
+
+    main {
+        grid-template-columns: 375px;
+        grid-template-rows: auto;
+        gap: 64px;
+
+        .main__part {
+            grid-column: 1;
+            grid-row: auto;
+            gap: 24px;
+            
+            picture,
+            .future,
+            .dive,
+            .new {
+                grid-column: 1;
+                grid-row: auto;
+            }
+            .dive {
+                margin-block-end: 40px;
+            }
+            
+        }
+        .articles {
+            grid-column: 1;
+            grid-auto-flow: row;
+            gap: 32px;
+        }
+    }
+}
