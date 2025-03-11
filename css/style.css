@@ -210,11 +210,15 @@ a {
     color: inherit;
 }
 
+header {
+    position: relative;
+}
+
 nav {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    position: relative;
+    /* position: relative; */
 
     & > a {
         display: inline-block;
@@ -226,40 +230,29 @@ nav {
         background-repeat: no-repeat;
     }
 
-     input {
-        display: block;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        position: absolute;
-        right: 0;
-        top: 0;
-        /* display: none; */
-        opacity: .5;
-        
+    input {
+        display: none;
     }
 
     .burger {
         width: 40px;
-        height: 40px;
+        height: 100%;
         position: absolute;
-        top: 0;
         right: 0;
-        display: grid;
-        row-gap: 4px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: none;
+        gap: 4px;
         align-content: center;
+        z-index: 4;
+        cursor: pointer;
     }
     span {
-        display: block;
-        width: 40px;
+        display: inline-block;
+        width: 100%;
         height: 3px;
         background-color: var(--dark-space-blue);
-        right: 0;
-        top: 0;
-        /* margin-block-end: 4px; */
     }
-
-    
 
     ul {
         list-style: none;
@@ -297,17 +290,19 @@ nav {
     }
 
     nav {
-
         .menuToggle input {
             display: block;
         }
 
-        
+        .burger {
+            display: grid;
+        }
     }
 
     nav ul {
         display: none;
     }
+
     main {
         grid-template-columns: 343px;
         grid-template-rows: auto;
