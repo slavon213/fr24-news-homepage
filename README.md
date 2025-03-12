@@ -37,7 +37,7 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
 
 ### Links
 
-- Посилання на Live Site URL: [GitHub Pages](https://your-solution-url.com)
+- Посилання на Live Site URL: [GitHub Pages](https://slavon213.github.io/fr24-news-homepage/)
 
 
 ## My process
@@ -97,7 +97,7 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
         transition: transform 0.5s ease, opacity 0.5s ease;
     }
 ```
-Оскільки в проекті не використовував `JavaScript`, то для перемикання вигляду меню використовував стан `checked` від `input type="checkbox"`:
+Оскільки в проекті не застосовував `JavaScript`, то для перемикання вигляду меню використав стан `checked` від `input type="checkbox"`:
 
 > :bulb: Тут тільки шматок коду, реалізацію можна подивитись в `style.css`.
 ```css
@@ -112,6 +112,7 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
 - не покладатися повністю на чужий `reset.css` — часом додає клопоту в пошуках дрібних деталей 
 - одним `CSS` без  `JavaScript` складно контролювати поведінку елементів, які розміщені на вищому рівні вкладеності
 - використовувати `input checkbox` для зміни  властивостей інших елементів
+- навчився робити просту анімацію для бургер-меню
 
 
 
