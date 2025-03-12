@@ -235,6 +235,10 @@ nav {
     }
 
     .burger {
+        --burger-line-width: 100%;
+        --burger-line-height: 3px;
+        --burger-line-gap: 4px;
+        
         width: 40px;
         height: 100%;
         position: absolute;
@@ -242,16 +246,18 @@ nav {
         top: 50%;
         transform: translateY(-50%);
         display: none;
-        gap: 4px;
+        gap: var(--burger-line-gap);
         align-content: center;
         z-index: 4;
         cursor: pointer;
     }
     span {
+        
         display: inline-block;
-        width: 100%;
-        height: 3px;
+        width: var(--burger-line-width);
+        height: var(--burger-line-height);
         background-color: var(--dark-space-blue);
+        transition: transform 0.5s ease, opacity 0.5s ease;
     }
 
     .overlay {
@@ -330,12 +336,30 @@ nav {
         display: none;
     }
 
+    
     #menuCheckbox:checked ~ ul {
         display: grid;
     }
     #menuCheckbox:checked ~ .overlay {
         display: block;
     }
+    #menuCheckbox:checked ~.burger span {
+       transition: transform 0.15s ease, opacity 0.5s ease;
+   }
+
+    #menuCheckbox:checked ~.burger span:nth-child(1) {
+        transform: translateY(calc(var(--burger-line-height) + var(--burger-line-gap))) rotate(45deg);
+    }
+    #menuCheckbox:checked ~.burger span:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+
+    }
+    #menuCheckbox:checked ~.burger span:nth-child(3) {
+        transform: translateY(calc(-1 * (var(--burger-line-height) + var(--burger-line-gap)))) rotate(-45deg);
+    }
+
+
 
     main {
         grid-template-columns: 343px;
