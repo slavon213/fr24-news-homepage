@@ -254,6 +254,10 @@ nav {
         background-color: var(--dark-space-blue);
     }
 
+    .overlay {
+        display: none;
+    }
+
     ul {
         list-style: none;
         display: grid;
@@ -281,7 +285,7 @@ nav {
         --cont-block-end-padding: 80px;
         --cont-inline-padding: 16px;
 
-        min-width: 300px;
+        min-width: 375px;
         padding: var(--cont-block-start-padding) var(--cont-inline-padding) var(--cont-block-end-padding);
         margin-block: 16px;
         max-width: 400px;
@@ -304,7 +308,6 @@ nav {
         min-height: 100vh;
         width: 100vw;
         background-color: #00001a81;
-        display: none;
     }
 
     nav ul {
