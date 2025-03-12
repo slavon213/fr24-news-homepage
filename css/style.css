@@ -273,7 +273,8 @@ nav {
 
 @media (max-width: 1060px) {
     /* body {
-        
+        padding-block-start: 34px;
+        padding-block-end: 80px;
     } */
 
     h2 {
@@ -281,8 +282,13 @@ nav {
         line-height: 40px;
     }
     .container {
-        max-width: 375px;
-        padding: 28px 16px 80px;
+        --cont-block-start-padding: 28px;
+        --cont-block-end-padding: 80px;
+        --cont-inline-padding: 16px;
+
+        min-width: 300px;
+        padding: var(--cont-block-start-padding) var(--cont-inline-padding) var(--cont-block-end-padding);
+        margin-block: 16px;
         max-width: 400px;
         grid-template-rows: auto;
         grid-auto-rows: auto;
@@ -290,17 +296,41 @@ nav {
     }
 
     nav {
-        .menuToggle input {
-            display: block;
-        }
-
         .burger {
             display: grid;
+            
         }
+    }
+    
+    .menuToggle {
+        position: absolute;
+        /* display: none; */
+        height: 100%;
+        width: 100%;
+        background-color: #00001a81;
+        overflow-x: hidden;
+
     }
 
     nav ul {
-        display: none;
+        position: absolute;
+        grid-auto-flow: row;
+        min-width: calc(70% + var(--cont-inline-padding));
+        right: calc(-1 * var(--cont-inline-padding));
+        top: calc(-1 * var(--cont-block-start-padding));
+        justify-content: start;
+        align-content: start;
+        background-color: var(--almost-white);
+        height: 100vh;
+        overflow: hidden;
+        padding-inline: 24px;
+        padding-block-start: 144px;
+        color: var(--dark-space-blue);
+        font-size: 18px;
+        line-height: 24px;
+        gap: 24px;
+        /* display: none; */
+
     }
 
     main {
