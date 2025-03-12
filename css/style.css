@@ -272,11 +272,6 @@ nav {
 }
 
 @media (max-width: 1060px) {
-    /* body {
-        padding-block-start: 34px;
-        padding-block-end: 80px;
-    } */
-
     h2 {
         font-size: 40px;
         line-height: 40px;
@@ -293,23 +288,23 @@ nav {
         grid-template-rows: auto;
         grid-auto-rows: auto;
         gap: 32px;
+        overflow: hidden;
     }
 
     nav {
         .burger {
             display: grid;
-            
         }
     }
-    
-    .menuToggle {
-        position: absolute;
-        /* display: none; */
-        height: 100%;
-        width: 100%;
-        background-color: #00001a81;
-        overflow-x: hidden;
 
+    .overlay {
+        position: absolute;
+        left: calc(-1 * var(--cont-inline-padding));
+        top: calc(-1 * var(--cont-block-start-padding));
+        min-height: 100vh;
+        width: 100vw;
+        background-color: #00001a81;
+        display: none;
     }
 
     nav ul {
@@ -329,8 +324,14 @@ nav {
         font-size: 18px;
         line-height: 24px;
         gap: 24px;
-        /* display: none; */
+        display: none;
+    }
 
+    #menuCheckbox:checked ~ ul {
+        display: grid;
+    }
+    #menuCheckbox:checked ~ .overlay {
+        display: block;
     }
 
     main {
